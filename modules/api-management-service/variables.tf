@@ -2,10 +2,6 @@ variable "name" {
   description = "The name of the API Management Service name."
   type        = string
 
-  validation {
-    condition     = endswith(var.rg_name, "-apim")
-    error_message = "The name must end with '-apim'."
-  }
 }
 
 variable "customer_name" {

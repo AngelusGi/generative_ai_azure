@@ -41,8 +41,9 @@ module "openai-api-definition" {
   api_display_name    = var.api_display_name
   api_name            = var.api_name
   api_path            = var.api_path
-  backend_url         = var.backend_url
-  api_management_name = var.api_management_name
+  
+  backend_url         = module.openai_service.endpoint
+  api_management_name = module.apim_service.name
 
   rg_name  = data.azurerm_resource_group.openai.name
   location = data.azurerm_resource_group.openai.location
