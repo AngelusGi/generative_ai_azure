@@ -1,19 +1,19 @@
-output "name" {
-  value = azurerm_api_management.openai.name
+output "api_name" {
+  value = azurerm_api_management_api.openai.name
   sensitive = false
 }
 
-output "url" {
-  value = azure_api_management.openai.management_api_url
+output "api_url" {
+  value = azurerm_api_management_api.openai.service_url
   sensitive = false
 }
 
-output "dev_portal" {
-  value = azure_api_management.openai.portal_url
+output "backend_url" {
+  value = azurerm_api_management_backend.openai.url
   sensitive = false
 }
 
-output "openai_name" {
-  value = azurerm_cognitive_account.openai.name
+output "backend_name" {
+  value = azurerm_api_management_backend.openai.name
   sensitive = false
 }

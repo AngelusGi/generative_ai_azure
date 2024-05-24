@@ -31,7 +31,7 @@ resource "azurerm_api_management_api" "openai" {
   import {
     content_format = "openapi+json"
     # content_value  = file("openai-openapiv3.json")
-    content_value = data.template_file.json_api_definition
+    content_value = data.template_file.json_api_definition.rendered
   }
 
   protocols = ["https"]
