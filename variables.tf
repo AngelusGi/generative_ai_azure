@@ -73,7 +73,17 @@ variable "api_path" {
   type        = string
 }
 
-variable "backend_url" {
-  description = "The name of the API backend URL."
+variable "state_rg_name" {
+  description = "The name of the resource group in which the state should be stored."
+  type        = string
+}
+
+variable "state_storage_name" {
+  description = "The name of the storage account in which the state should be stored."
+  type        = string
+}
+
+variable "state_container_name" {
+  description = "The name of the container in which the state should be stored."
   type        = string
 }
