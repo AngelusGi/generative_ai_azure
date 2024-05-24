@@ -7,10 +7,10 @@ terraform {
   }
 
   backend "azurerm" {
-    resource_group_name  = var.state_rg_name
-    storage_account_name = var.state_storage_name
-    container_name       = var.state_container_name
-    key                  = "genai.tfstate"
+    resource_group_name  = "testdevops"
+    storage_account_name = "testdevopsavd"
+    container_name       = "devops-terraform"
+    key                  = "genai_test2.tfstate"
   }
 }
 
